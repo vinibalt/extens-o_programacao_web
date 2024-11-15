@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Mensagem</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav>
+    <a href="/">Início</a>
+    <a href="/mural">Mural</a>
+    <a href="/login">Sair</a>
+</nav>
+<div class="container">
+    <h2>Detalhes da Mensagem</h2>
+    <div class="message-detail">
+        <p><strong>Título:</strong> <%= mensagem.titulo %></p>
+        <p><strong>Autor:</strong> <%= mensagem.autor %></p>
+        <p><strong>Conteúdo:</strong></p>
+        <p><%= mensagem.conteudo %></p>
+    </div>
+    <div style="text-align: center;">
+        <a href="/mural" class="btn">Voltar ao Mural</a>
+    </div>
+</div>
+<footer>
+    &copy; 2024 Mural de Mensagens
+</footer>
+</body>
+</html>

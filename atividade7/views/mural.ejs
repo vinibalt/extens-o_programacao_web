@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav>
+    <a href="/">Início</a>
+    <a href="/cadastro">Cadastro</a>
+    <a href="/login">Login</a>
+</nav>
+<div class="container">
+    <h2>Mural de Mensagens</h2>
+    <ul>
+        <% mensagens.forEach((msg, index) => { %>
+            <li><a href="/mensagem/<%= index %>"><%= msg.titulo %></a> - <strong>Autor:</strong> <%= msg.autor %></li>
+        <% }) %>
+    </ul>
+    <form method="POST" action="/mural">
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" placeholder="Título" required>
+        <label for="conteudo">Conteúdo:</label>
+        <textarea name="conteudo" placeholder="Conteúdo" required></textarea>
+        <button type="submit">Postar</button>
+    </form>
+</div>
+<footer>
+    &copy; 2024 Mural de Mensagens
+</footer>
+</body>
+</html>
